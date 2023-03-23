@@ -30,6 +30,10 @@ struct Lsegtree{
     {
         // change this function as required.
         T ans = (l + r);
+        // if need max 
+        // T ans = max(l,r);
+        // if need gcd
+        // T ans = gcd(l,r);
         return ans;
     }
 
@@ -55,7 +59,8 @@ struct Lsegtree{
         T ans = (tr-tl+1)*upd;
         // increment range by upd:
         // T ans = curr + (tr - tl + 1)*upd
-
+        // query, take max ya min, update, assign a value
+        // T ans = upd;
         return ans;
     }
 
@@ -63,6 +68,8 @@ struct Lsegtree{
     {
         U ans = old_upd;
         ans=new_upd;
+        // adding update to a range
+        // U ans = old_upd+new_upd;
         return ans;
     }  
 
